@@ -43,8 +43,6 @@
                         <h1>Galeria de fotos do Google Glass</h1>
                         <h2>por Gustavo S de Lima</h2>
                         <h3 class="direita">Atualizado em 01/Maio/2013</h3>
-
-
                         <header id="cabecalho-artigo">
                             <hgroup>
                                 <h3>Tecnologia > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -54,7 +52,7 @@
                                 <h3 class="direita">Atualizado em 23/Abril/2013</h3>
                             </hgroup>
                         </header>
-                        <form>
+                        <form method="post" id="fContato">
                             <fieldset id="usuario">Identificação do Usuário<legend></legend>
                                 <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20"
                                         maxlength="30" placeholder="Nome Completo">
@@ -78,15 +76,22 @@
                                         size="13" maxlength="80" placeholder="Rua, Aven, Trav"></p>
                                 <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0"
                                         max="999999"></p>
-                                <p><label for="cEst">Estado:</label><input type="text" name="tEst" id="cEst" size="13"
-                                        maxlength="80" placeholder="Estado"></p>
-                                <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="13"
-                                        maxlength="80" placeholder="Cidade"></p>
+                                <p><label for="cEst">Estado:</label><select name="tEstado" id="cEst">
+                                    <optgroup label="Região Sul">
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="PR">Paraná</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="cCid">Cidade:</label><input type="text" name="tCid" id="cCid" size="20" maxlength="80" placeholder="Cidade" list="cidade"></p>
+                                <datalist>
+                                    <option value="ijuí">Ijuí</option>
+                                </datalist>
                             </fieldset>
                             <fieldset id="mensagem">
                                 <legend>Mensagem do Usuário</legend>
-                                Grau de Urgência:
-                                Mensagem:
+                                <p><label for="cUrg">Grau de Urgência:</label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10">Max</p>
+                                <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></label></p>
                             </fieldset>
                             <fieldset>
                                 <legend>Quero um Google Glass</legend>
